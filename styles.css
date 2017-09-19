@@ -21,6 +21,11 @@ ul {
   color: #878787
 }
 
+.image-number::before {
+  content: "#";
+  color: #878787;
+}
+
 .image-caption {
   display: inline-flex;
   float:right;
@@ -31,9 +36,7 @@ ul {
 
 .image-caption span {
   padding: 2px;
-
 }
-
 
 .octocat img {
   width: 250px;
@@ -43,7 +46,21 @@ ul {
   border-width: thin;
   border-color: #C2C2C2;
   margin: 10px;
+}
 
+.octocat {
+  position: relative;
+}
+.octocat::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 7.5px 0 7.5px;
+  border-color: #c2c2c2 transparent transparent transparent;
+  position: absolute;
+  right: 15px;
+  bottom: 28px;
 }
 
 .authors {
